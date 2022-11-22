@@ -1,0 +1,34 @@
+.navbar{
+    /* background-color: rgb(20, 10, 62); */
+    background-color: #31352E;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    border-bottom: 3px solid green;
+}
+
+.navHeading{
+    color: rgba(255, 255, 255, 0.892);
+    padding-left: 5vw;
+    /* background-color: rgb(20, 10, 62); */
+    background-color: #31352E;
+}
+
+.navLinks{
+    margin-left: auto;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.892);
+    padding: 9px;
+    font-size: 18px;
+    /* background-color: rgb(20, 10, 62); */
+    background-color: #31352E;
+}
+
+.navbar a:hover{
+    color:#778A35;
+}

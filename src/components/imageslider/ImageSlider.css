@@ -1,0 +1,47 @@
+.images{
+    height: 500px;
+    width: 100%;
+}
+
+.leftArrow{
+    position:absolute;
+    left: 15px;
+    top: 300px;
+    background-color: rgba(240, 255, 255, 0.282);
+    border-radius: 10px;
+    padding: 5px;
+    border :2px solid rgba(0, 0, 0, 0.399);
+}
+
+.leftArrow:hover{
+    background-color:rgba(240, 255, 255, 0.47);
+    border:2px solid;
+}
+
+.rightArrow{
+    position:absolute;
+    right: 15px;
+    top: 300px;
+    background-color: rgba(240, 255, 255, 0.282);
+    border-radius: 10px;
+    padding: 5px;
+    border :2px solid rgba(0, 0, 0, 0.399);
+}
+
+.rightArrow:hover{
+    background-color:rgba(240, 255, 255, 0.47);
+    border:2px solid;
+}
+
+.isContainer{
+    padding: 10px;
+    /* background-color: rgba(86, 177, 192, 0.488); */
+    background-color: #e7e8d1;
+    border-bottom: 1px solid black;
+}
+
+.images{
+    border-radius: 10px;
+    border :2px solid black;
+}
+

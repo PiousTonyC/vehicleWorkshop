@@ -1,0 +1,83 @@
+.profileContainer{
+    padding: 5px;
+}
+
+.pSegment{
+    background-color: #EBEBE8;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid ;
+}
+
+.subHeading{
+    text-align: center;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+}
+
+.gridcontainer > div{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.416);
+    border-radius: 3px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+}
+
+
+
+.editButton{
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(0, 0, 255, 0.632);
+    border-radius: 5px;
+}
+
+.editButton:hover{
+    color: white;
+    background-color: rgba(89, 154, 219, 0.716);
+}
+
+.saveButton{
+    margin-right: 5px;
+    cursor: pointer;
+    background-color:white;
+    color: green;
+    border:2px solid green;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.saveButton:hover{
+    color: white;
+    background-color: rgba(0, 128, 0, 0.737);
+}
+
+input[type=text]{
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.416);
+    background-color: #EBEBE8;
+}
+
+input[type=text]:hover{
+    border-bottom: 3px solid #778A35;
+}
+
+input[type=text]:focus{
+    border: none;
+    border-bottom: 3px solid #778A35;
+    outline: none;
+}
+

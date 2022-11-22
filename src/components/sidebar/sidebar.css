@@ -1,0 +1,14 @@
+.elements{
+    padding: 10px;
+    text-align: center;
+    border: 2px solid;
+    background-color: #EBEBE8;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.elements:hover{
+    background-color:#778A35 ;
+    color: #EBEBE8;
+    cursor: pointer;
+}

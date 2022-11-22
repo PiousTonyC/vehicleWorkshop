@@ -1,0 +1,31 @@
+.mainBody{
+    width: 100%;
+}
+
+.contact{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-around;
+}
+
+a{
+    color: #778A35 ;
+}
+
+.about{
+    background-color: #e7e8d1;
+    border:1px solid;
+}
+
+.references{
+    /* background-color: #97caef; */
+    background-color: #e7e8d1;
+    border:1px solid;
+}
+
+.contact{
+    background-color: #31352E;
+    
+    color:aliceblue;
+    border:1px solid;
+}

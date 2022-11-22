@@ -1,0 +1,35 @@
+.dashboardContainer{
+    padding: 10px;
+}
+
+.segment{
+    border-radius: 15px;
+    background-color: aliceblue;
+    padding:5px;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+#hmain{
+    text-align: center;
+}
+
+.sub{
+    display:flex;
+    justify-content:space-between;
+}
+
+.left{
+    padding-left: 5px;
+    line-height: 5px;
+}
+
+.right{
+    padding-right: 5px;
+    line-height: 5px;
+}
+
+
+.subHeading{
+    padding-left: 5px;
+}
