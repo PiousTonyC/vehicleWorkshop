@@ -1,3 +1,6 @@
+/* .sideBarContainer{
+    width: ;
+} */
 .elements{
     padding: 10px;
     text-align: center;
@@ -8,6 +11,12 @@
 }
 
 .elements:hover{
+    background-color:#778A35 ;
+    color: #EBEBE8;
+    cursor: pointer;
+}
+
+.elements:target{
     background-color:#778A35 ;
     color: #EBEBE8;
     cursor: pointer;
