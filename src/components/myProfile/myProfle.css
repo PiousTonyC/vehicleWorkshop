@@ -7,7 +7,7 @@
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 10px;
-    border: 1px solid ;
+    box-shadow: 0 4px 8px 0px  #888888;
 }
 
 .subHeading{
@@ -81,3 +81,23 @@ input[type=text]:focus{
     outline: none;
 }
 
+.deleteButton{
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.deleteButton:hover{
+    color: white;
+    background-color: red;
+}
+
+.deletediv{
+    
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}

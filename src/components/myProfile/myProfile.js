@@ -1,13 +1,42 @@
 import './myProfle.css'
-
-const veh1 = {
-    id:"123",
-    regno:"kl 08 6543",
-    vtype:"SUV",
-    year:"2022"
-}
+import { useState,useEffect } from 'react';
+import Vcard from '../vcard/vcard';
 
 const Myprofile = () => {
+
+    const vehiclesData = [
+        {
+        vid:"AA01",
+        regno:"KL 07 AZ 6553",
+        vtype:"SUV",
+        brand:"Toyota"   
+    },
+    {
+        vid:"AA02",
+        regno:"KL 34 BZ 9953",
+        vtype:"SUV",
+        brand:"KIA"   
+    },
+    {
+        vid:"AA03",
+        regno:"TN 07 CA 6444",
+        vtype:"SEDAN",
+        brand:"BMW"   
+    }];
+
+    const [vehicles,setVehicles] = useState([]);
+
+    useEffect(()=>{
+        setVehicles(vehiclesData)
+    },[]);
+
+    const customer = {fname:"Pious",
+                    lname:"Tony",
+                    email:"pioustony44733@gmail.com",
+                    address:"Chiramel House,Ayyanthole,Thrissur",
+                    phno:"9072272724",
+                    dob:"2002-06-19"};
+
     return (
         <div className="profileContainer">
             <div className="pSegment">
@@ -15,23 +44,23 @@ const Myprofile = () => {
                 <div className="gridcontainer">
                     <div className="name">
                         <span>Name: </span>
-                        <span><input type="text" placeholder="Enter Name"  /></span>
+                        <span><input type="text" placeholder="Enter Name" defaultValue={customer.fname +" "+ customer.lname}  /></span>
                     </div>
                     <div className="dob">
                         <span>DOB: </span>
-                        <span><input type="text" placeholder="Date-of-Birth"  /></span>
+                        <span><input type="text" placeholder="Date-of-Birth" defaultValue={customer.dob} /></span>
                     </div>
                     <div className="email">
                         <span>Email: </span>
-                        <span><input type="text" placeholder="Enter Email"/></span>
+                        <span><input type="text" placeholder="Enter Email" defaultValue={customer.email}/></span>
                     </div>
                     <div className="phonenum">
                         <span>Ph Num: </span>
-                        <span><input type="text" placeholder="Enter Phone num"  /></span>
+                        <span><input type="text" placeholder="Enter Phone num" defaultValue={customer.phno} /></span>
                     </div>
                     <div className="address">
                         <span>City: </span>
-                        <span><input type="text" placeholder="Enter Address"/></span>
+                        <span><input type="text" placeholder="Enter Address" defaultValue={customer.address}/></span>
                     </div>
                 </div>
                 <div className="buttons">
@@ -42,20 +71,14 @@ const Myprofile = () => {
 
             <div className="pSegment">
                 <h3 className='subHeading'>Vehicle details</h3>
-                <ul>
-                    <li>vehicle id:{veh1.id} vehicle regno:{veh1.regno} vehicle type:{veh1.vtype}</li>
-                    <li>Vehicle 2 and details</li>
-                    <li>Vehicle 3 and details</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div className="vcards">
+                    {vehicles && vehicles.map((vehicle)=>(
+                        <><Vcard  data={vehicle} key={vehicle.vid} />
+                        <div className="deletediv"><button className='deleteButton'>Delete</button></div>
+                    </>
+                    ))}
+                </div>
             </div>
-
-            ithil ene eeh page initially load cheyumbol presonal detail ill value db ill ninnum ketanam
-            ....adhyam edit button only pinne save button visible aaya mathe....vechicles inum edit and save button ketanam...........
-            vehicle display cheyunathu pinne korachu kude bange aakam
-
         </div>
     );
 }

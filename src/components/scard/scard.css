@@ -1,0 +1,9 @@
+.scard{
+    display: flex;
+    background-color:#e2f6cc4d;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0px  #888888;
+    justify-content:space-around;
+}

@@ -1,4 +1,4 @@
-.CScontainer{
+.serviceContainer{
     background-color: #778A35 ;
     padding: 20px;
     align-items: center;
@@ -8,7 +8,7 @@
     margin-top: 10px;
 }
 
-.innerContainer{
+.serviceContainer > div{
     text-align: center;
     background-color: #EBEBE8;
     border-radius: 10px;
@@ -16,15 +16,30 @@
     box-shadow: 2px 4px 10px 0px  #111111;
 }
 
-label{
+.serviceBody > div{
     padding: 5px;
 }
 
-.sid{
-    margin: 8px;
+label{
+    margin: 5px;
 }
 
-.checkButton{
+input[type=date]{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    padding: 2px;
+
+}
+
+input[type=text]{
+    cursor: pointer;
+}
+
+.bookButton{
     margin-right: 5px;
     cursor: pointer;
     background-color:white;
@@ -34,11 +49,11 @@ label{
     border-radius: 5px;
 }
 
-.checkButton:hover{
+.bookButton:hover{
     color: white;
     background-color: rgba(0, 128, 0, 0.737);
 }
 
-.cscontainer{
+.bscontainer{
     height: 100vh;
 }

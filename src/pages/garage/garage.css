@@ -2,23 +2,33 @@
     height: 100vh;
 }
 
-.grdContainer{
+/* .grdContainer{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     background-color: #778A35;
     padding: 10px;
     gap: 10px;
     height: 100vh;
+} */
+ 
+.grdContainer{
+    display: flex;
+    background-color:#D1E2C4;
 }
 
 .grdContainer > div{
     background-color:#D1E2C4 ;
     padding: 5px;
-    border: 2px solid;
-    border-radius: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.425);
+}
+
+.item1{
+    width: 20%;
+    height: 100vh;
 }
 
 .item2{
-    grid-column-start: 2;
-    grid-column-end: 7;
+    width: 80%;
 }
+
+

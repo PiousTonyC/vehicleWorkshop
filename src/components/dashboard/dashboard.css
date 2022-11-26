@@ -4,10 +4,10 @@
 
 .segment{
     border-radius: 15px;
-    background-color: aliceblue;
+    background-color: #EBEBE8;
     padding:5px;
     margin-bottom: 10px;
-    border: 1px solid;
+    box-shadow: 0 4px 8px 0px  #888888;
 }
 
 #hmain{

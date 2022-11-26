@@ -4,3 +4,10 @@
     cursor: pointer;
 } */
 
+.pSegment{
+    margin: 10px;
+}
+
+.avcontainer{
+    height: 100vh;
+}

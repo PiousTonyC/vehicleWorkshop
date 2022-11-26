@@ -10,7 +10,7 @@ const ImageSlider = () => {
 
     const slides = [image1,image2,image3,image4];
     const [currentIndex,setCurrentIndex] = useState(0);
-    const [currentImage,setCurrentImage] = useState(slides[0]);
+    const [currentImage,setCurrentImage] = useState();
 
     const goToPrevious = ()=>{
         const isFirstSlide = currentIndex === 0;
@@ -21,17 +21,33 @@ const ImageSlider = () => {
     const goToNext = () => {
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        // console.log("*",isLastSlide,newIndex,currentIndex);
+
         setCurrentIndex(newIndex);
+        
     };
 
     
 
     useEffect (() => {
-        setCurrentImage(slides[currentIndex]);
+        // setCurrentImage(slides[currentIndex]);
+        setCurrentImage();
     },[currentIndex])
 
+    useEffect(()=>{
+        console.log("hello")
+    setInterval(()=>{
+        
+        // console.log("*",newIndex,currentIndex);?
+
+        setCurrentIndex(currentIndex=>{const isLastSlide = currentIndex === slides.length - 1;
+            const newIndex = isLastSlide ? 0 : currentIndex + 1;
+            return newIndex;
+        });},5000);
+
+    },[])
     const newStyle ={
-        background: `url(${currentImage}) no-repeat center center/ cover `
+        background: `url(${slides[currentIndex]}) no-repeat center center/ cover `
     }
 
     return (
