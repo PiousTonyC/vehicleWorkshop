@@ -6,8 +6,7 @@ import { useState,useEffect } from 'react';
 const Dashboard = () => {
 
     // details from the "Customer table"
-    const customer = {fname:"Pious",
-                    lname:"Tony",
+    const customer = {name:"Pious Tony",
                     email:"pioustony44733@gmail.com",
                     address:"Chiramel House,Ayyanthole,Thrissur",
                     phno:"9072272724"};
@@ -60,11 +59,11 @@ const Dashboard = () => {
     return (
         <div className="dashboardContainer">
             <div className="segment">
-                <h2 id='hmain'>Hello {customer.fname}</h2>
+                <h2 id='hmain'>Hello {customer.name}</h2>
                 <hr />
                 <div className="sub">
                     <div className="left">
-                        <p>{customer.fname +" "+ customer.lname}</p>
+                        <p>{customer.name}</p>
                         <p>{customer.address}</p>
                     </div>
                     <div className='right'>
