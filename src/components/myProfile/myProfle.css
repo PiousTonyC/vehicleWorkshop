@@ -63,6 +63,21 @@
     background-color: rgba(0, 128, 0, 0.737);
 }
 
+.cancelButton{
+    margin-right: 5px;
+    cursor: pointer;
+    background-color:white;
+    color: green;
+    border:2px solid green;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.cancelButton:hover{
+    color: white;
+    background-color: rgba(0, 128, 0, 0.737);
+}
+
 input[type=text]{
     padding: 6px 10px;
     box-sizing: border-box;

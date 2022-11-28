@@ -1,8 +1,16 @@
+import { useEffect, useState,useRef} from 'react';
 import './myProfle.css'
-import { useState,useEffect } from 'react';
 import Vcard from '../vcard/vcard';
 
+
 const Myprofile = () => {
+
+    const [edit,setEdit]=useState('false');
+    const nameRef = useRef(null);
+    const addRef = useRef(null);
+    const dobRef = useRef(null);
+    const emailRef = useRef(null);
+    const phnoRef = useRef(null);
 
     const vehiclesData = [
         {
@@ -30,47 +38,89 @@ const Myprofile = () => {
         setVehicles(vehiclesData)
     },[]);
 
-    const customer = {fname:"Pious",
-                    lname:"Tony",
+    const customer = {name:"Pious Tony",
                     email:"pioustony44733@gmail.com",
                     address:"Chiramel House,Ayyanthole,Thrissur",
                     phno:"9072272724",
                     dob:"2002-06-19"};
+
+
+    
+    function submit(){
+        setEdit('false')
+        console.log(nameRef.current.value);
+        customer.name=nameRef.current.value;
+        customer.dob=dobRef.current.value;
+        customer.email=emailRef.current.value;
+        customer.ph=phnoRef.current.value;
+        customer.add=addRef.current.value;
+        console.log(customer);
+    }
+
 
     return (
         <div className="profileContainer">
             <div className="pSegment">
                 <h3 className='subHeading'>Personal Details</h3>
                 <div className="gridcontainer">
-                    <div className="name">
+                {edit==='true' ? 
+                <>  <div className="name">
+                            <span>Name: </span>
+                            <span><input type="text" ref={nameRef} placeholder="Enter Name" /></span>
+                        </div>
+                        <div className="dob">
+                            <span>DOB: </span>
+                            <span><input type="text" ref={dobRef} placeholder="Date-of-Birth" /></span>
+                        </div>
+                            <div className="email">
+                                <span>Email: </span>
+                                <span><input type="text" ref={emailRef} placeholder="Enter Email" /></span>
+                            </div>
+                            <div className="phonenum">
+                                <span>Ph Num: </span>
+                                <span><input type="text" ref={phnoRef} placeholder="Enter Phone num" /></span>
+                            </div>
+                            <div className="address">
+                                <span>City: </span>
+                                <span><input type="text" ref={addRef} placeholder="Enter Address" /></span>
+                            </div>
+                        </>
+                     :  <>  <div className="name">
                         <span>Name: </span>
-                        <span><input type="text" placeholder="Enter Name" defaultValue={customer.fname +" "+ customer.lname}  /></span>
+                        <span><input type="text" placeholder="Enter Name" value={customer.name}  /></span>
                     </div>
                     <div className="dob">
                         <span>DOB: </span>
-                        <span><input type="text" placeholder="Date-of-Birth" defaultValue={customer.dob} /></span>
+                        <span><input type="text" placeholder="Date-of-Birth" value={customer.dob} /></span>
                     </div>
                     <div className="email">
                         <span>Email: </span>
-                        <span><input type="text" placeholder="Enter Email" defaultValue={customer.email}/></span>
+                        <span><input type="text" placeholder="Enter Email" value={customer.email}/></span>
                     </div>
                     <div className="phonenum">
                         <span>Ph Num: </span>
-                        <span><input type="text" placeholder="Enter Phone num" defaultValue={customer.phno} /></span>
+                        <span><input type="text" placeholder="Enter Phone num" value={customer.phno} /></span>
                     </div>
                     <div className="address">
                         <span>City: </span>
-                        <span><input type="text" placeholder="Enter Address" defaultValue={customer.address}/></span>
+                        <span><input type="text" placeholder="Enter Address" value={customer.address}/></span>
                     </div>
+                    </>
+                    }
                 </div>
                 <div className="buttons">
-                    <button className='editButton'>Edit</button>
-                    <button className='saveButton'>Save</button>
+                    {edit==='false' 
+                        ? <button className='editButton' onClick={()=>setEdit('true')}>Edit</button>
+                        :
+                        <>  <button className='cancelButton' onClick={()=>setEdit('false')}>Cancel</button>
+                            <button className='saveButton' onClick={submit}>Save</button>     
+                        </>
+                    }
                 </div>
             </div>
 
             <div className="pSegment">
-                <h3 className='subHeading'>Vehicle details</h3>
+                <h3 className='subHeading'>Vehicle customer</h3>
                 <div className="vcards">
                     {vehicles && vehicles.map((vehicle)=>(
                         <><Vcard  data={vehicle} key={vehicle.vid} />

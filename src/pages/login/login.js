@@ -1,6 +1,11 @@
 import './login.css'
 
-const Login = () => {
+const Login = ({login,setLogin}) => {
+    function submit(){
+        setLogin(true)
+        console.log(login)
+    }
+    
     return (
         <div className="pageContainer">
             <div className="container">
@@ -13,7 +18,7 @@ const Login = () => {
                         <input type="password" placeholder='Password' />
                     </div>
                     <div className="buttons">
-                    <button className='loginButton'>Login</button>
+                    <button className='loginButton' onClick={submit}>Login</button>
                 </div>
                 </div>
                 <p className='signup'>Don't have an account ? <a href="https://www.google.com" target='_blank'>Click here</a> </p>
