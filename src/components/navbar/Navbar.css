@@ -7,6 +7,7 @@
     width: auto;
     margin: 0 auto;
     border-bottom: 3px solid green;
+    
 }
 
 .navHeading{
@@ -20,13 +21,16 @@
     margin-left: auto;
 }
 
+
 .navbar a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.892);
-    padding: 9px;
+    padding: 10px;
     font-size: 18px;
     /* background-color: rgb(20, 10, 62); */
-    background-color: #31352E;
+    /* background-color: #31352E; */
+    margin: 5px; 
+    border-radius: 1rem;
 }
 
 .navbar a:hover{

@@ -1,11 +1,9 @@
 import './sidebar.css'
 
 const Sidebar = ({toggle,setToggle}) => {
-
     
     return (
         <div className="sideBarContainer">
-
             <div className="elements" id='dashboard' onClick={()=>setToggle(1)}>Dashboard</div>
             <div className="elements" id='myprofile' onClick={()=>setToggle(2)}>My Profile</div>
             <div className="elements" id='addvehicles' onClick={()=>setToggle(3)}>Add Vehicles</div>

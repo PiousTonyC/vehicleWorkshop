@@ -16,8 +16,8 @@
     cursor: pointer;
 }
 
-.elements:target{
-    background-color:#778A35 ;
+#dashboard:active{
+    background:#778A35 ;
     color: #EBEBE8;
     cursor: pointer;
 }
