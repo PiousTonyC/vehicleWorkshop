@@ -8,7 +8,9 @@ const Main = () => {
             <ImageSlider></ImageSlider>
             <div className="about">
                 <h2>Why us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nihil voluptates iure. Unde magnam laboriosam, nisi neque ea totam, suscipit facere iusto corrupti explicabo illo vitae, laborum dignissimos? Excepturi, corporis!</p>
+                <p>It's our attention to small details ,fast and efficient service that makes as stand out from the rest.We also provide our customers services to view, update, delete details. We provide a one-stop destination for all your services for your vehicle.
+                We ensure complete safety of vehicles as well as your data.
+                </p>
             </div> 
             <Services/> 
             <div className="references">
