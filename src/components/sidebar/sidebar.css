@@ -11,13 +11,13 @@
 }
 
 .elements:hover{
-    background-color:#778A35 ;
+    background-color:#037a7e ;
     color: #EBEBE8;
     cursor: pointer;
 }
 
-#dashboard:active{
-    background:#778A35 ;
+#active{
+    background:#037a7e ;
     color: #EBEBE8;
     cursor: pointer;
 }
