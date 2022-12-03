@@ -37,3 +37,18 @@
     color:#778A35;
 }
 
+.logoutContainer{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.892);
+    padding: 9px;
+    font-size: 18px;
+    /* background-color: rgb(20, 10, 62); */
+    background-color: #31352E;
+    display: inline;
+    cursor: pointer;
+}
+
+.logoutContainer:hover{
+    color:#778A35;
+}
+

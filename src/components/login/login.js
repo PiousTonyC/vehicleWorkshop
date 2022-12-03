@@ -1,17 +1,28 @@
 import './login.css'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 const Login = ({login,setLogin}) => {
+
     
-    function submit(){
-        setLogin(true)
-        console.log(login)
-    }
-    
+    const navigate = useNavigate();
+
     const [inputs,setInputs]=useState({
         username:"",
         password:""
       })
+    
+    function submit(){
+        setLogin(true)
+        console.log(login)
+        navigate('/garage');
+        console.log(inputs);
+    }
+
+    function signin(){
+        navigate('/signin');
+        
+    }
 
       const handleChange = e=>{
         setInputs(prev=>({...prev,[e.target.name]:e.target.value}))
@@ -29,10 +40,9 @@ const Login = ({login,setLogin}) => {
                         <input type="password" placeholder='Password' onChange={handleChange} name='password'/>
                     </div>
                     <div className="buttons">
-                    <button className='loginButton' onClick={submit}>Login</button>
+                        <button className='loginButton' onClick={submit}>Login</button>
+                    </div>
                 </div>
-                </div>
-                <p className='signup'>Don't have an account ? <a href="https://www.google.com" target='_blank'>Click here</a> </p>
             </div>
         </div>
         

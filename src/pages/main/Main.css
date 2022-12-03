@@ -1,5 +1,7 @@
 .mainBody{
     width: 100%;
+    background-color:#A7BEAE;
+    padding-top: 10px;
 }
 
 .contact{
@@ -14,13 +16,19 @@ a{
 
 .about{
     background-color: #e7e8d1;
-    border:1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0px  #888888;
 }
 
 .references{
     /* background-color: #97caef; */
     background-color: #e7e8d1;
-    border:1px solid;
+    border-radius: 10px;
+    padding:10px;
+    margin:10px;
+    box-shadow: 0 4px 8px 0px  #888888;
 }
 
 .contact{
@@ -30,3 +38,10 @@ a{
     border:1px solid;
 }
 
+.mailLink{
+    color: #e7e8d1;
+}
+
+.mailLink:hover{
+    color: rgb(25, 122, 91);
+}

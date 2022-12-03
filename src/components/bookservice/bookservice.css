@@ -57,3 +57,21 @@ input[type=text]{
 .bscontainer{
     height: 100vh;
 }
+
+.sreport{
+    text-align: center;
+    background-color: #EBEBE8;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 4px 10px 0px  #111111;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#on_of{
+    display:none;
+}
+
+
+

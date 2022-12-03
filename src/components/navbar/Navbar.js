@@ -1,8 +1,21 @@
-import React, {useState} from "react";
+import React from "react";
 import {NavLink} from "react-router-dom";
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom'
 
-const Navbar = ({login}) => {
+const Navbar = ({login,setLogin}) => {
+
+    const navigate = useNavigate();
+
+    const logoutfunction = () => {
+        const response = window.confirm("Do you wan to Logout !");
+        if (response){
+            setLogin(false)
+            navigate('/');
+        }
+        else{
+        }
+    }
 
     return (
         <div className="navbar">
@@ -15,12 +28,10 @@ const Navbar = ({login}) => {
                     Garage
                 </NavLink> : <></> 
                 }
-                { login === false ? <NavLink to="/login" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
+                { login === false ? <NavLink to="/loginSignup" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
                 Login/SignUp
                 </NavLink>
-                    : <><NavLink to="/login" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
-                    Logout</NavLink>
-                </>
+                    : <div className="logoutContainer" onClick={logoutfunction} >Logout</div>
                 }
             </div>
         </div>

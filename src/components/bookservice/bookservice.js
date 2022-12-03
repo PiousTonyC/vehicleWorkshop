@@ -1,4 +1,5 @@
 import './bookservice.css'
+import {useState} from 'react';
 
 const Bookservice = () => {
 
@@ -6,6 +7,12 @@ const Bookservice = () => {
     const currDate = `${current.getFullYear()}-${current.getMonth()+1}-${current.getDate()}`;
     const minDate = `${current.getFullYear()}-${current.getMonth()+1}-${current.getDate()}`;
     const maxDate = `${current.getFullYear()+2}-${current.getMonth()+1}-${current.getDate()}`;
+
+    const service = {
+        id:"1234",
+        vid:"A0017"
+    }
+    const [isActive,setIsActive] = useState(true);
     
     return (
         <div className="bscontainer">
@@ -25,10 +32,13 @@ const Bookservice = () => {
                             <input type="text" id="vid" placeholder='Enter vehicle id...' />
                         </div>
                         <div className="buttons">
-                            <button className='bookButton'>Confirm</button>
+                            <button className='bookButton' onClick={()=>{setIsActive(false)}}>Confirm</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="sreport" id={isActive ? 'on_of' : ''}>
+                <p>Your service id is: {service.id} for vehicle :{service.vid}</p>
             </div>
         </div>
     );

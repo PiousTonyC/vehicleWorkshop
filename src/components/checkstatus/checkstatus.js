@@ -1,6 +1,15 @@
 import './checkstatus.css'
+import { useState } from 'react';
 
 const Checkstatus = () => {
+
+    const [isActive,setIsActive] = useState(true);
+    const service = {
+        id:"1234",
+        vid:"A0017",
+        status:"Completed"
+    }
+
     return (
         <div className="cscontainer">
             <div className="CScontainer">
@@ -15,10 +24,13 @@ const Checkstatus = () => {
                                 <input type="text" id="sid" placeholder='Enter serviec number...' />
                         </div>
                         <div className="buttons">
-                            <button className='checkButton'>Check</button>
+                            <button className='checkButton' onClick={()=>{setIsActive(false)}}>Check</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="sreport" id={isActive ? 'on_of' : ''}>
+                    <p>Service id: {service.id} Vehicle id:{service.vid} Status:{service.status}</p>
             </div>
         </div>
     );

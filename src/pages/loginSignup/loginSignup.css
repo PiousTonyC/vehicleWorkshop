@@ -1,0 +1,19 @@
+.signinLink{
+    position:absolute;
+    top: 480px;
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+}
+
+.signup:hover{
+    color: blue;
+}
+
+.signup{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
