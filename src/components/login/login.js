@@ -1,52 +1,79 @@
-import './login.css'
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import "./login.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { options } from "../../util";
 
-const Login = ({login,setLogin}) => {
+const Login = ({ login, setLogin }) => {
+  const navigate = useNavigate();
 
-    
-    const navigate = useNavigate();
+  const [inputs, setInputs] = useState({
+    username: "",
+    password: "",
+  });
 
-    const [inputs,setInputs]=useState({
-        username:"",
-        password:""
-      })
-    
-    function submit(){
-        setLogin(true)
-        console.log(login)
-        navigate('/garage');
-        console.log(inputs);
-    }
+  async function submit() {
+    setLogin(true);
+    console.log(login);
+    console.log("hello1");
+    const body = JSON.stringify({
+      email: inputs.username,
+      password: inputs.password,
+    });
 
-    function signin(){
-        navigate('/signin');
-        
-    }
-
-      const handleChange = e=>{
-        setInputs(prev=>({...prev,[e.target.name]:e.target.value}))
-      }
-
-    return (
-        <div className="pageContainer">
-            <div className="container">
-                <div className="login">
-                    <h2>Login</h2>
-                    <div id="userName" className="inputfield" >
-                        <input type="text" placeholder='UserName' name='username' onChange={handleChange}/>
-                    </div>
-                    <div id="password"  className="inputfield">
-                        <input type="password" placeholder='Password' onChange={handleChange} name='password'/>
-                    </div>
-                    <div className="buttons">
-                        <button className='loginButton' onClick={submit}>Login</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+    let resp = await fetch(
+      "http://localhost:8000/api/v1/auth/user/create-session",
+      options("POST", body)
     );
-}
- 
+    let respJson = await resp.json();
+    if (resp.status === 422) {
+      console.log("incorrect credentials");
+    } else {
+      localStorage.setItem("token", respJson.data.token);
+      console.log("set in local storage");
+      navigate("/garage");
+    }
+
+    // console.log(inputs);
+  }
+
+  function signin() {
+    navigate("/signin");
+  }
+
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  return (
+    <div className="pageContainer">
+      <div className="container">
+        <div className="login">
+          <h2>Login</h2>
+          <div id="userName" className="inputfield">
+            <input
+              type="text"
+              placeholder="UserName"
+              name="username"
+              onChange={handleChange}
+            />
+          </div>
+          <div id="password" className="inputfield">
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={handleChange}
+              name="password"
+            />
+          </div>
+          <div className="buttons">
+            <button className="loginButton" onClick={submit}>
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Login;
