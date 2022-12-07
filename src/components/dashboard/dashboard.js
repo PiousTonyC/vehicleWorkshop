@@ -7,53 +7,12 @@ import { options } from "../../util";
 const Dashboard = () => {
   // details from the "Customer table"
   const [customer, setCustomer] = useState({
-    name: "Pious Tony",
-    email: "pioustony44733@gmail.com",
-    address: "Chiramel House,Ayyanthole,Thrissur",
-    phno: "9072272724",
+    name: "",
+    email: "",
   });
 
   const [vehicles, setVehicles] = useState([]);
   const [services, setServices] = useState([]);
-
-  const vehiclesData = [
-    {
-      vid: "AA01",
-      regno: "KL 07 AZ 6553",
-      vtype: "SUV",
-      brand: "Toyota",
-    },
-    {
-      vid: "AA02",
-      regno: "KL 34 BZ 9953",
-      vtype: "SUV",
-      brand: "KIA",
-    },
-    {
-      vid: "AA03",
-      regno: "TN 07 CA 6444",
-      vtype: "SEDAN",
-      brand: "BMW",
-    },
-  ];
-
-  const serviceData = [
-    {
-      sid: "001",
-      date: "2022-11-12",
-      vid: "AA01",
-    },
-    {
-      sid: "002",
-      date: "2022-02-12",
-      vid: "AA01",
-    },
-    {
-      sid: "003",
-      date: "2022-06-21",
-      vid: "AA03",
-    },
-  ];
 
   useEffect(() => {
     const fd = async () => {

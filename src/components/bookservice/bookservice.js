@@ -14,10 +14,10 @@ const Bookservice = () => {
     current.getMonth() + 1
   }-${current.getDate()}`;
 
-  const service = {
-    id: "1234",
-    vid: "A0017",
-  };
+  // const service = {
+  //   id: "1234",
+  //   vid: "A0017",
+  // };
   const [isActive, setIsActive] = useState(true);
   const [date, setDate] = useState("");
   const [vid, setvid] = useState();
@@ -78,9 +78,7 @@ const Bookservice = () => {
         </div>
       </div>
       <div className="sreport" id={isActive ? "on_of" : ""}>
-        <p>
-          Your service id is: {service.id} for vehicle :{service.vid}
-        </p>
+        <p style={{fontSize:"20px"}}>Service Booked</p>
       </div>
     </div>
   );

@@ -11,27 +11,6 @@ const Myprofile = () => {
   const emailRef = useRef(null);
   const phnoRef = useRef(null);
 
-  // const vehiclesData = [
-  //   {
-  //     vid: "AA01",
-  //     regno: "KL 07 AZ 6553",
-  //     vtype: "SUV",
-  //     brand: "Toyota",
-  //   },
-  //   {
-  //     vid: "AA02",
-  //     regno: "KL 34 BZ 9953",
-  //     vtype: "SUV",
-  //     brand: "KIA",
-  //   },
-  //   {
-  //     vid: "AA03",
-  //     regno: "TN 07 CA 6444",
-  //     vtype: "SEDAN",
-  //     brand: "BMW",
-  //   },
-  // ];
-
   const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
@@ -62,10 +41,10 @@ const Myprofile = () => {
     setEdit("false");
     console.log(nameRef.current.value);
     customer.name = nameRef.current.value;
-    customer.dob = dobRef.current.value;
+    // customer.dob = dobRef.current.value;
     customer.email = emailRef.current.value;
-    customer.ph = phnoRef.current.value;
-    customer.add = addRef.current.value;
+    // customer.ph = phnoRef.current.value;
+    // customer.add = addRef.current.value;
     console.log(customer);
     let body = JSON.stringify({
       name: customer.name,
@@ -92,19 +71,19 @@ const Myprofile = () => {
                   <input type="text" ref={nameRef} placeholder="Enter Name" />
                 </span>
               </div>
-              <div className="dob">
+              {/* <div className="dob">
                 <span>DOB: </span>
                 <span>
                   <input type="text" ref={dobRef} placeholder="Date-of-Birth" />
                 </span>
-              </div>
+              </div> */}
               <div className="email">
                 <span>Email: </span>
                 <span>
                   <input type="text" ref={emailRef} placeholder="Enter Email" />
                 </span>
               </div>
-              <div className="phonenum">
+              {/* <div className="phonenum">
                 <span>Ph Num: </span>
                 <span>
                   <input
@@ -113,13 +92,13 @@ const Myprofile = () => {
                     placeholder="Enter Phone num"
                   />
                 </span>
-              </div>
-              <div className="address">
+              </div> */}
+              {/* <div className="address">
                 <span>City: </span>
                 <span>
                   <input type="text" ref={addRef} placeholder="Enter Address" />
                 </span>
-              </div>
+              </div> */}
             </>
           ) : (
             <>
@@ -134,7 +113,7 @@ const Myprofile = () => {
                   />
                 </span>
               </div>
-              <div className="dob">
+              {/* <div className="dob">
                 <span>DOB: </span>
                 <span>
                   <input
@@ -143,7 +122,7 @@ const Myprofile = () => {
                     value={customer.dob} readOnly
                   />
                 </span>
-              </div>
+              </div> */}
               <div className="email">
                 <span>Email: </span>
                 <span>
@@ -154,7 +133,7 @@ const Myprofile = () => {
                   />
                 </span>
               </div>
-              <div className="phonenum">
+              {/* <div className="phonenum">
                 <span>Ph Num: </span>
                 <span>
                   <input
@@ -173,7 +152,7 @@ const Myprofile = () => {
                     value={customer.address} readOnly
                   />
                 </span>
-              </div>
+              </div> */}
             </>
           )}
         </div>
@@ -197,7 +176,7 @@ const Myprofile = () => {
       </div>
 
       <div className="pSegment">
-        <h3 className="subHeading">Vehicle customer</h3>
+        <h3 className="subHeading">Vehicle Details</h3>
         <div className="vcards">
           {vehicles &&
             vehicles.map((vehicle, index) => (
