@@ -12,7 +12,7 @@ const Login = ({ login, setLogin }) => {
   });
 
   async function submit() {
-    setLogin(true);
+    
     console.log(login);
     console.log("hello1");
     const body = JSON.stringify({
@@ -31,6 +31,7 @@ const Login = ({ login, setLogin }) => {
       localStorage.setItem("token", respJson.data.token);
       console.log("set in local storage");
       navigate("/garage");
+      setLogin(true);
     }
 
     // console.log(inputs);

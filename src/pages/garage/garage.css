@@ -1,6 +1,7 @@
 .grdContainer{
     display: flex;
     background-color:#D1E2C4;
+    height: 100vh;
 }
 
 .grdContainer > div{
@@ -15,5 +16,7 @@
 .item2{
     width: 80%;
 }
+
+
 
 

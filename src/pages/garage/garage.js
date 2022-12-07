@@ -13,7 +13,7 @@ const Garage = () => {
 
 
     return (
-        <div classN ame="garageContainer">
+        <div className="garageContainer">
             <div className="grdContainer">
                 <div className="item1">
                     <Sidebar toggle={toggle} setToggle={setToggle} />
