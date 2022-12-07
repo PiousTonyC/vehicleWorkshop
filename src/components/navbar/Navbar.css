@@ -1,6 +1,6 @@
 .navbar{
     /* background-color: rgb(20, 10, 62); */
-    background-color: #31352E;
+    background-color: #28282b;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     color: rgba(255, 255, 255, 0.892);
     padding-left: 5vw;
     /* background-color: rgb(20, 10, 62); */
-    background-color: #31352E;
+    background-color: #28282b;
 }
 
 .navLinks{
@@ -34,7 +34,7 @@
 }
 
 .navbar a:hover{
-    color:#778A35;
+    color: #97b880;
 }
 
 .logoutContainer{

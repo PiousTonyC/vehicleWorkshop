@@ -11,26 +11,26 @@ const Myprofile = () => {
   const emailRef = useRef(null);
   const phnoRef = useRef(null);
 
-  const vehiclesData = [
-    {
-      vid: "AA01",
-      regno: "KL 07 AZ 6553",
-      vtype: "SUV",
-      brand: "Toyota",
-    },
-    {
-      vid: "AA02",
-      regno: "KL 34 BZ 9953",
-      vtype: "SUV",
-      brand: "KIA",
-    },
-    {
-      vid: "AA03",
-      regno: "TN 07 CA 6444",
-      vtype: "SEDAN",
-      brand: "BMW",
-    },
-  ];
+  // const vehiclesData = [
+  //   {
+  //     vid: "AA01",
+  //     regno: "KL 07 AZ 6553",
+  //     vtype: "SUV",
+  //     brand: "Toyota",
+  //   },
+  //   {
+  //     vid: "AA02",
+  //     regno: "KL 34 BZ 9953",
+  //     vtype: "SUV",
+  //     brand: "KIA",
+  //   },
+  //   {
+  //     vid: "AA03",
+  //     regno: "TN 07 CA 6444",
+  //     vtype: "SEDAN",
+  //     brand: "BMW",
+  //   },
+  // ];
 
   const [vehicles, setVehicles] = useState([]);
 
@@ -130,7 +130,7 @@ const Myprofile = () => {
                   <input
                     type="text"
                     placeholder="Enter Name"
-                    value={customer.name}
+                    value={customer.name} readOnly
                   />
                 </span>
               </div>
@@ -140,7 +140,7 @@ const Myprofile = () => {
                   <input
                     type="text"
                     placeholder="Date-of-Birth"
-                    value={customer.dob}
+                    value={customer.dob} readOnly
                   />
                 </span>
               </div>
@@ -150,7 +150,7 @@ const Myprofile = () => {
                   <input
                     type="text"
                     placeholder="Enter Email"
-                    value={customer.email}
+                    value={customer.email} readOnly
                   />
                 </span>
               </div>
@@ -160,7 +160,7 @@ const Myprofile = () => {
                   <input
                     type="text"
                     placeholder="Enter Phone num"
-                    value={customer.phno}
+                    value={customer.phno} readOnly
                   />
                 </span>
               </div>
@@ -170,7 +170,7 @@ const Myprofile = () => {
                   <input
                     type="text"
                     placeholder="Enter Address"
-                    value={customer.address}
+                    value={customer.address} readOnly
                   />
                 </span>
               </div>

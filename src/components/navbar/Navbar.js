@@ -21,14 +21,14 @@ const Navbar = ({login,setLogin}) => {
         <div className="navbar">
             <h2 className="navHeading">e-Workshop</h2>
             <div className="navLinks">
-                <NavLink to="/" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
+                <NavLink to="/" style={({ isActive }) => ({background: isActive ? 'rgb(226, 226, 191)' : '' , color : isActive ? 'black' :'' })}>
                     Home
                 </NavLink>
-                { login === true ? <NavLink to="/garage" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
+                { login === true ? <NavLink to="/garage" style={({ isActive }) => ({background: isActive ? 'rgb(226, 226, 191)' : '' , color : isActive ? 'black' :'' })}>
                     Garage
                 </NavLink> : <></> 
                 }
-                { login === false ? <NavLink to="/loginSignup" style={({ isActive }) => ({background: isActive ? 'violet' : ''})}>
+                { login === false ? <NavLink to="/loginSignup" style={({ isActive }) => ({background: isActive ? 'rgb(226, 226, 191)' : '' , color : isActive ? 'black' :'' })}>
                 Login/SignUp
                 </NavLink>
                     : <div className="logoutContainer" onClick={logoutfunction} >Logout</div>

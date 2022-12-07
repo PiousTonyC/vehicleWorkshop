@@ -5,14 +5,14 @@
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 8px 0px  #888888;
-    background-color: #EBEBE8;
+    background-color: rgb(235, 235, 232);
     margin: 5px;
     border-radius: 10px;
 }
 
 .elements:hover{
-    background-color:#037a7e3c ;
-    color: #EBEBE8;
+    background-color:#05a6ac ;
+    color: black;
     cursor: pointer;
 }
 
